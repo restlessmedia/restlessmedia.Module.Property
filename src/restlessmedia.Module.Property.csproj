@@ -5,7 +5,7 @@
     <Product></Product>
     <Copyright>Copyright © 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Version>2.0.1</Version>
+    <Version>2.1.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>restlessmedia</Company>
     <Authors>Phil Cooper</Authors>
@@ -24,7 +24,7 @@
     <PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304.0" />
     <PackageReference Include="EnterpriseLibrary.TransientFaultHandling" Version="6.0.1304.0" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
-    <PackageReference Include="FastMapper" Version="1.3.0" />
+    <PackageReference Include="FastMapper" Version="2.1.0" />
     <PackageReference Include="FastMember" Version="1.3.0" />
     <PackageReference Include="Microsoft.AspNet.Razor" Version="3.0.0" />
     <PackageReference Include="Microsoft.Data.Edm" Version="5.2.0" />
@@ -47,10 +47,10 @@
     <PackageReference Include="restlessmedia.Module.Address" Version="1.0.0" />
     <PackageReference Include="restlessmedia.Module.Contact" Version="0.3.1" />
     <PackageReference Include="restlessmedia.Module.Data.EF" Version="1.1.0" />
-    <PackageReference Include="restlessmedia.Module.Email" Version="1.2.0" />
-    <PackageReference Include="restlessmedia.Module.File" Version="1.12.0" />
+    <PackageReference Include="restlessmedia.Module.Email" Version="1.3.0" />
+    <PackageReference Include="restlessmedia.Module.File" Version="2.0.0" />
     <PackageReference Include="restlessmedia.Module.Meta" Version="1.0.1" />
-    <PackageReference Include="SqlBuilder" Version="1.16.0" />
+    <PackageReference Include="SqlBuilder" Version="1.16.3" />
     <PackageReference Include="SqlBuilder.DataServices" Version="2.0.0" />
     <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />
     <PackageReference Include="System.AppContext" Version="4.3.0" />
@@ -82,7 +82,7 @@
     <PackageReference Include="System.Reflection.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
     <PackageReference Include="System.Runtime" Version="4.3.0" />
-    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.1" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
     <PackageReference Include="System.Runtime.Handles" Version="4.3.0" />
     <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />

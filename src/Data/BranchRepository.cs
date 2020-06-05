@@ -4,11 +4,10 @@ using System.Linq;
 
 namespace restlessmedia.Module.Property.Data
 {
-  internal class BranchRepository : Repository<TBranch, DatabaseContext>
+  public class BranchRepository : Repository<TBranch, DatabaseContext>
   {
     public BranchRepository(DatabaseContext context)
-      : base(context)
-    { }
+      : base(context) { }
 
     public TBranch GetBranch(int branchId, byte? type)
     {
@@ -23,9 +22,7 @@ namespace restlessmedia.Module.Property.Data
 
     public TBranch AddOrAttach(IBranch branch)
     {
-      TBranch dataModel;
-
-      if (Exists(branch, out dataModel))
+      if (Exists(branch, out TBranch dataModel))
       {
         Context.Branch.Attach(dataModel);
       }

@@ -8,9 +8,7 @@ namespace restlessmedia.Module.Property.Data
   public class DatabaseContext : restlessmedia.Module.Data.EF.DatabaseContext
   {
     public DatabaseContext(IDataContext dataContext, bool autoDetectChanges)
-      : base(dataContext, autoDetectChanges)
-    {
-    }
+      : base(dataContext, autoDetectChanges) { }
 
     public T Repository<T>()
       where T : Repository
