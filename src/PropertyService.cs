@@ -2,7 +2,6 @@
 using restlessmedia.Module.File;
 using restlessmedia.Module.Meta;
 using restlessmedia.Module.Property.Data;
-using SqlBuilder.DataServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +10,12 @@ namespace restlessmedia.Module.Property
 {
   internal sealed class PropertyService : IPropertyService
   {
-    public PropertyService(IFileService fileService, IMetaService metaService, IPropertyDataProvider propertyDataProvider, ModelDataService<Data.DataModel.VProperty> modelDataService, ICacheProvider cacheProvider)
+    public PropertyService(IFileService fileService, IMetaService metaService, IPropertyDataProvider propertyDataProvider, ICacheProvider cacheProvider)
       : base()
     {
       _fileService = fileService ?? throw new ArgumentNullException(nameof(fileService));
       _metaService = metaService ?? throw new ArgumentNullException(nameof(metaService));
       _propertyDataProvider = propertyDataProvider ?? throw new ArgumentNullException(nameof(propertyDataProvider));
-      _modelDataService = modelDataService ?? throw new ArgumentNullException(nameof(modelDataService));
       _cacheProvider = cacheProvider ?? throw new ArgumentNullException(nameof(cacheProvider));
     }
 
@@ -294,8 +292,6 @@ namespace restlessmedia.Module.Property
     private readonly IMetaService _metaService;
 
     private readonly IPropertyDataProvider _propertyDataProvider;
-
-    private readonly ModelDataService<Data.DataModel.VProperty> _modelDataService;
 
     private readonly ICacheProvider _cacheProvider;
   }
