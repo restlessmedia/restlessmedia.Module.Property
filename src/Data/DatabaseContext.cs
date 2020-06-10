@@ -7,7 +7,7 @@ namespace restlessmedia.Module.Property.Data
 {
   public class DatabaseContext : restlessmedia.Module.Data.EF.DatabaseContext
   {
-    public DatabaseContext(IDataContext dataContext, bool autoDetectChanges)
+    public DatabaseContext(IDataContext dataContext, bool autoDetectChanges = false)
       : base(dataContext, autoDetectChanges) { }
 
     public T Repository<T>()
