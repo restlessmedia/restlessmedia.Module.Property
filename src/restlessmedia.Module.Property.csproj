@@ -5,7 +5,7 @@
     <Product></Product>
     <Copyright>Copyright © 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Version>2.1.3</Version>
+    <Version>2.1.4</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>restlessmedia</Company>
     <Authors>Phil Cooper</Authors>
@@ -20,7 +20,7 @@
     <PackageReference Include="Autofac" Version="4.9.1" />
     <PackageReference Include="Autofac.Configuration" Version="4.1.0" />
     <PackageReference Include="Dapper" Version="1.60.1" />
-    <PackageReference Include="DateTimeExtensions" Version="2.0.0" />
+    <PackageReference Include="DateTimeExtensions" Version="2.0.0.1000" />
     <PackageReference Include="EnterpriseLibrary.Common" Version="6.0.1304.0" />
     <PackageReference Include="EnterpriseLibrary.TransientFaultHandling" Version="6.0.1304.0" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
