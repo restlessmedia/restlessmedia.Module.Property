@@ -352,7 +352,8 @@ namespace restlessmedia.Module.Property.Data
         .Paging(1, 1)
         .Randomise();
 
-      select.Where(x => x.Featured, true);
+      select
+        .Where(x => x.Featured, true);
 
       dynamic result = _modelDataProvider.QueryDynamic(select, connection => select.WithLicenseId(connection, DataContext.LicenseSettings)).FirstOrDefault();
 
