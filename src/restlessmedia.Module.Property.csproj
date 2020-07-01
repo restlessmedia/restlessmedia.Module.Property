@@ -5,7 +5,7 @@
     <Product></Product>
     <Copyright>Copyright © 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Version>2.1.6</Version>
+    <Version>2.1.7</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>restlessmedia</Company>
     <Authors>Phil Cooper</Authors>
@@ -16,6 +16,9 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="restlessmedia.Module.Property.module" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.1" />
     <PackageReference Include="Autofac.Configuration" Version="4.1.0" />
@@ -111,5 +114,10 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="restlessmedia.Module.Property.module">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>
