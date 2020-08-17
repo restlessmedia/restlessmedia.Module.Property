@@ -5,7 +5,7 @@
     <Product></Product>
     <Copyright>Copyright © 2020</Copyright>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <Version>2.1.7</Version>
+    <Version>2.1.8</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Company>restlessmedia</Company>
     <Authors>Phil Cooper</Authors>
@@ -18,6 +18,12 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="restlessmedia.Module.Property.module" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="restlessmedia.Module.Property.module">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.9.1" />
@@ -114,10 +120,5 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="restlessmedia.Module.Property.module">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 </Project>
