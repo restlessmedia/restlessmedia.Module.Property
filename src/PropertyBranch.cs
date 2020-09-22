@@ -1,4 +1,6 @@
-﻿namespace restlessmedia.Module.Property
+﻿using restlessmedia.Module.Address;
+
+namespace restlessmedia.Module.Property
 {
   public class PropertyBranch : Branch, IPropertyBranch
   {
