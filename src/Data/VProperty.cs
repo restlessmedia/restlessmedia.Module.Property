@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 
 namespace restlessmedia.Module.Property.Data
 {
-  [Table("_VProperty")]
+  [Table("VProperty")]
   public class VProperty : LicensedEntity, IProperty
   {
     public VProperty()
