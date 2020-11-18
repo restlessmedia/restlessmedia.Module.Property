@@ -1,9 +1,7 @@
-﻿using restlessmedia.Module;
-using restlessmedia.Module.Address;
+﻿using restlessmedia.Module.Address;
 using restlessmedia.Module.Address.Data;
 using restlessmedia.Module.Data.EF;
 using restlessmedia.Module.File;
-using restlessmedia.Module.Property;
 using restlessmedia.Module.Property.Data.DataModel;
 using System;
 using System.Collections.Generic;

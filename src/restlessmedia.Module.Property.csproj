@@ -58,7 +58,7 @@
     <PackageReference Include="restlessmedia.Module.Data.EF" Version="2.2.1" />
     <PackageReference Include="restlessmedia.Module.Email" Version="3.0.0" />
     <PackageReference Include="restlessmedia.Module.File" Version="2.4.5" />
-    <PackageReference Include="restlessmedia.Module.Meta" Version="1.0.3" />
+    <PackageReference Include="restlessmedia.Module.Meta" Version="1.0.4" />
     <PackageReference Include="SqlBuilder" Version="2.0.1" />
     <PackageReference Include="SqlBuilder.DataServices" Version="2.0.0" />
     <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.6" />

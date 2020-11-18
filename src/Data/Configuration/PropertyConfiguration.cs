@@ -2,7 +2,7 @@
 
 namespace restlessmedia.Module.Property.Configuration
 {
-  public class PropertyConfiguration<T> : LicensedEntityConfiguration<T>
+  internal class PropertyConfiguration<T> : LicensedEntityConfiguration<T>
     where T : LicensedEntity, IProperty
   {
     public PropertyConfiguration()
