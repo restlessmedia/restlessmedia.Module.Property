@@ -14,7 +14,7 @@ using System.Text.RegularExpressions;
 
 namespace restlessmedia.Module.Property.Data
 {
-  [Table("VProperty")]
+  [Table("_VProperty")]
   public class VProperty : LicensedEntity, IProperty
   {
     public VProperty()
