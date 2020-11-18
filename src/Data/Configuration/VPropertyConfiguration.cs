@@ -1,6 +1,6 @@
 ﻿using restlessmedia.Module.Property.Data;
 
-namespace restlessmedia.Module.Property.Configuration
+namespace restlessmedia.Module.Property.Data.Configuration
 {
   internal class VPropertyConfiguration : PropertyConfiguration<VProperty>
   {
