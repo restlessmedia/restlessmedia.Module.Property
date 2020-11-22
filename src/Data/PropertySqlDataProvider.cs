@@ -166,11 +166,11 @@ namespace restlessmedia.Module.Property.Data
       });
     }
 
-    public ModelCollection<PropertyEntity> ListRelated(int propertyId)
+    public ModelCollection<PropertyEntity> ListRelated(int propertyId, int max = 10)
     {
       return Query((connection) =>
       {
-        return new ModelCollection<PropertyEntity>(connection.Query<PropertyEntity, AddressEntity, Marker, FileEntity, PropertyBranch, PropertyEntity>("dbo.SPListRelatedProperty", Map, new { propertyId }, commandType: CommandType.StoredProcedure, splitOn: "AddressId,Latitude,SystemFileName,BranchGuid"));
+        return new ModelCollection<PropertyEntity>(connection.Query<PropertyEntity, AddressEntity, Marker, FileEntity, PropertyBranch, PropertyEntity>("dbo.SPListRelatedProperty", Map, new { propertyId, max }, commandType: CommandType.StoredProcedure, splitOn: "AddressId,Latitude,SystemFileName,BranchGuid"));
       });
     }
 

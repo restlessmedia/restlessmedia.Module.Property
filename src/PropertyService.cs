@@ -58,11 +58,6 @@ namespace restlessmedia.Module.Property
       return _propertyDataProvider.Read<TProperty, TAddress, TMarker>(propertyId);
     }
 
-    public PropertyContactEntity ReadPropertyContact(int contactId)
-    {
-      return ReadPropertyContact<PropertyContactEntity, AddressEntity, Marker>(contactId);
-    }
-
     public TPropertyContact ReadPropertyContact<TPropertyContact, TAddress, TMarker>(int contactId)
       where TPropertyContact : PropertyContactEntity
       where TAddress : AddressEntity, new()
@@ -77,29 +72,9 @@ namespace restlessmedia.Module.Property
       return _propertyDataProvider.ListFeatured<T>();
     }
 
-    public ModelCollection<PropertyEntity> ListFeatured()
-    {
-      return ListFeatured<PropertyEntity>();
-    }
-
     public PropertyEntity GetRandomFeatured()
     {
       return _propertyDataProvider.GetRandomFeatured();
-    }
-
-    public ModelCollection<PropertyEntity> ListRecentProperties(int page, int maxPerPage, ListingType listing, OrderFlags order = OrderFlags.AddedDateDesc, bool getCount = false)
-    {
-      return ListProperties(page, maxPerPage, listing, order, getCount);
-    }
-
-    public ModelCollection<PropertyEntity> ListProperties(int developmentId, int page = 1, int maxPerPage = int.MaxValue)
-    {
-      return ListProperties<PropertyEntity>(developmentId, page, maxPerPage);
-    }
-
-    public ModelCollection<PropertyEntity> ListProperties(PropertyQuery query, bool getCount = false)
-    {
-      return ListProperties<PropertyEntity>(query, getCount);
     }
 
     public ModelCollection<T> ListProperties<T>(int developmentId, int page = 1, int maxPerPage = int.MaxValue)
@@ -117,34 +92,9 @@ namespace restlessmedia.Module.Property
       return list;
     }
 
-    public ModelCollection<PropertyEntity> ListProperties(int page, int maxPerPage, ListingType listing, OrderFlags order, bool getCount = false)
+    public ModelCollection<PropertyEntity> ListRelated(int propertyId, int max = 10)
     {
-      return ListProperties(new PropertyQuery()
-      {
-        Page = page,
-        MaxPerPage = maxPerPage,
-        ListingType = listing,
-        Order = order
-      }, getCount);
-    }
-
-    public ModelCollection<PropertyEntity> ListRelated(int propertyId)
-    {
-      return _propertyDataProvider.ListRelated(propertyId);
-    }
-
-    public ModelCollection<PropertyEntity> ListRelated(PropertyEntity property)
-    {
-      return property.PropertyId.HasValue ? ListRelated(property.PropertyId.Value) : null;
-    }
-
-    public ModelCollection<PropertyContactEntity> ListPropertyContacts(int page, int maxPerPage, bool getCount)
-    {
-      return ListPropertyContacts(new PropertyContactQuery()
-      {
-        Page = page,
-        MaxPerPage = maxPerPage
-      }, getCount);
+      return _propertyDataProvider.ListRelated(propertyId, max);
     }
 
     public ModelCollection<PropertyContactEntity> ListPropertyContacts(PropertyContactQuery query, bool getCount)

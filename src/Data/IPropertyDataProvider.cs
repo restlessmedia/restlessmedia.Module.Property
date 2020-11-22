@@ -17,7 +17,7 @@ namespace restlessmedia.Module.Property.Data
     ModelCollection<T> ListProperties<T>(PropertyQuery query, bool getCount = false)
       where T : PropertyEntity;
 
-    ModelCollection<PropertyEntity> ListRelated(int propertyId);
+    ModelCollection<PropertyEntity> ListRelated(int propertyId, int max = 10);
 
     ModelCollection<PropertyContactEntity> ListPropertyContacts(PropertyContactQuery query, bool getCount = false);
 

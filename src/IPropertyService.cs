@@ -5,32 +5,13 @@ namespace restlessmedia.Module.Property
 {
   public interface IPropertyService : IService
   {
-    ModelCollection<PropertyEntity> ListRecentProperties(int page, int maxPerPage, ListingType listing, OrderFlags order = OrderFlags.AddedDateDesc, bool getCount = false);
-
-    ModelCollection<PropertyEntity> ListProperties(int developmentId, int page = 1, int maxPerPage = int.MaxValue);
-
     ModelCollection<T> ListProperties<T>(int developmentId, int page = 1, int maxPerPage = int.MaxValue)
       where T : PropertyEntity;
-
-    ModelCollection<PropertyEntity> ListProperties(int page, int maxPerPage, ListingType listing, OrderFlags order = OrderFlags.AddedDateDesc, bool getCount = false);
-
-    ModelCollection<PropertyEntity> ListProperties(PropertyQuery query, bool getCount = false);
 
     ModelCollection<T> ListProperties<T>(PropertyQuery query, bool getCount = false)
       where T : PropertyEntity;
 
-    ModelCollection<PropertyEntity> ListRelated(int propertyId);
-
-    /// <summary>
-    /// Performs a sql side algorithm to get the closest matching properties for this property
-    /// </summary>
-    /// <param name="page"></param>
-    /// <param name="maxPerPage"></param>
-    /// <param name="property"></param>
-    /// <returns></returns>
-    ModelCollection<PropertyEntity> ListRelated(PropertyEntity property);
-
-    ModelCollection<PropertyContactEntity> ListPropertyContacts(int page, int maxPerPage, bool getCount);
+    ModelCollection<PropertyEntity> ListRelated(int propertyId, int max = 10);
 
     /// <summary>
     /// List property contacts
@@ -70,16 +51,7 @@ namespace restlessmedia.Module.Property
     ModelCollection<T> ListFeatured<T>()
       where T : PropertyEntity;
 
-    ModelCollection<PropertyEntity> ListFeatured();
-
     PropertyEntity GetRandomFeatured();
-
-    /// <summary>
-    /// Reads a property contact
-    /// </summary>
-    /// <param name="contactId"></param>
-    /// <returns></returns>
-    PropertyContactEntity ReadPropertyContact(int contactId);
 
     /// <summary>
     /// Reads a property contact
